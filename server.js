@@ -3,6 +3,11 @@ const session = require('express-session')
 const passport = require('./mypassport')
 const path = require('path')
 
+const PORT = process.env.PORT || 4444
+
+
+
+
 const app = express();
 
 app.use(express.json())
@@ -35,6 +40,6 @@ app.get('/logout', (req, res) => {
   res.redirect('/')
 })
 
-app.listen(9898, function () {
+app.listen(PORT, function () {
     console.log("Server started on http://localhost:9898");
 });
