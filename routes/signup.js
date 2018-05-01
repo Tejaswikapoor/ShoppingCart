@@ -13,6 +13,10 @@ route.post('/', (req, res) => {
     return res.send("Cannot create  user without password")
   }
 
+
+
+  
+
   User.create({
     username: req.body.username,
     password: req.body.password

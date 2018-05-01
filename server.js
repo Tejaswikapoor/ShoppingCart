@@ -23,6 +23,9 @@ app.use(passport.session())
 app.set('view engine', 'hbs')
 
 // Static Files
+
+
+
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 // Routes
@@ -40,6 +43,7 @@ app.get('/logout', (req, res) => {
   res.redirect('/')
 })
 
-app.listen(PORT, function () {
-    console.log("Server started on http://localhost:9898");
+
+  app.listen(PORT, function () {
+    console.log("Server started on http://localhost:4444");
 });
